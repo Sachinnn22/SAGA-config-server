@@ -1,6 +1,12 @@
+server:
+  port: 8888
+
 spring:
   application:
     name: config-server
+
+  profiles:
+    active: native
 
   cloud:
     config:
@@ -10,6 +16,3 @@ spring:
             - classpath:/configurations
             - classpath:/configurations/platform
             - classpath:/configurations/services
-
-server:
-  port: 8888
