@@ -17,5 +17,5 @@ logging:
 
 jwt:
   secret: a-very-secure-jwt-secret-key-that-should-be-at-least-256-bits-long
-  expiration: 900000 # 15 minutes in ms
-  refresh-expiration: 604800000 # 7 days in ms
+  expiration: 900000 
+  refresh-expiration: 604800000
