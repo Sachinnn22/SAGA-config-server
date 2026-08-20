@@ -39,12 +39,6 @@ management:
       exposure:
         include: "*"
 
-logging:
-  level:
-    lk.ijse.eca: DEBUG
-    org.springframework.web: INFO
-    org.hibernate.SQL: DEBUG
-
 jwt:
   secret: a-very-secure-jwt-secret-key-that-should-be-at-least-256-bits-long
   expiration: 900000

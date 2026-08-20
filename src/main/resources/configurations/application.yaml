@@ -11,11 +11,11 @@ management:
 
 logging:
   level:
-    lk.ijse.eca: DEBUG
+    com.example: DEBUG          
     org.springframework.web: INFO
     org.hibernate.SQL: DEBUG
 
 jwt:
-  secret: a-very-secure-jwt-secret-key-that-should-be-at-least-256-bits-long
+  secret: MySuperDuperSecretKeyForJwtAuthenticationWhichIsVeryLongAndSecure123456
   expiration: 900000 
   refresh-expiration: 604800000
