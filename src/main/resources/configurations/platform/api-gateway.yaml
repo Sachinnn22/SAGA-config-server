@@ -1,4 +1,10 @@
+server:
+  port: 8084
+
 spring:
+  application:
+    name: api-gateway
+
   cloud:
     gateway:
       server:
@@ -11,24 +17,29 @@ spring:
 
           routes:
 
-            # User & Auth Service
+            # =========================
+            # USER SERVICE
+            # =========================
             - id: user-service
               uri: lb://USER-SERVICE
               predicates:
                 - Path=/api/v1/auth/**,/api/v1/users/**
-                
 
-            # Salon Service
+            # =========================
+            # SALON SERVICE
+            # =========================
             - id: salon-service
               uri: lb://SALON-SERVICE
               predicates:
                 - Path=/api/v1/salons/**
 
-            # Booking Service
-            - id: booking-service
-              uri: lb://BOOKING-SERVICE
+            # =========================
+            # APPOINTMENT SERVICE
+            # =========================
+            - id: appointment-service
+              uri: lb://APPOINTMENT-SERVICE
               predicates:
-                - Path=/api/v1/bookings/**
+                - Path=/api/v1/appointments/**
 
           default-filters:
             - PreserveHostHeader
@@ -38,11 +49,8 @@ spring:
             cors-configurations:
               '[/**]':
                 allowedOrigins: "*"
-                allowed-methods: "*"
-                allowed-headers: "*"
-
-server:
-  port: 8084
+                allowedMethods: "*"
+                allowedHeaders: "*"
 
 eureka:
   client:

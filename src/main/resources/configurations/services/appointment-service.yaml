@@ -1,0 +1,18 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: appointment-service
+
+  data:
+    mongodb:
+      uri: mongodb+srv://sachi:sachi17953@cluster0.btxveln.mongodb.net/appointment_db?appName=Cluster0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  instance:
+    prefer-ip-address: true
