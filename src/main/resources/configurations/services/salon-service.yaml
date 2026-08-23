@@ -25,9 +25,6 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
 
-file:
-  upload-dir: ${user.home}/.ijse/eca/salon/uploads
-
 eureka:
   client:
     service-url:
