@@ -12,7 +12,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/Sachinnn22/SAGA-config
+          uri: https://github.com/Sachinnn22/SAGA-config.git
           search-paths: platform,services
         native:
           search-locations:
